@@ -3,7 +3,7 @@ USE BanksDb
 SELECT
 	Number,
 	Accounts.Balance AS AccountBalance, 
-	SUM(Cards.Balance) AS ÑardsBalance,
+	SUM(Cards.Balance) AS CardsBalance,
 	COUNT(Cards.AccountNumber) AS CardsCount,
 	ABS(Accounts.Balance - SUM(Cards.Balance)) AS Difference
 FROM Accounts
