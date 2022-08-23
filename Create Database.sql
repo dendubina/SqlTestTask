@@ -54,7 +54,7 @@ END
 GO
 
 ALTER TABLE Accounts
-ADD CHECK(dbo.GetClientAccountsCount(ClientId, BankId) = 0);
+ADD CHECK(dbo.GetClientAccountsCount(ClientId, BankId) > 0);
 
 CREATE TABLE Cards
 (	
