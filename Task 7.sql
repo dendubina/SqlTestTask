@@ -37,15 +37,14 @@ BEGIN TRAN
 		END
 	ELSE
 		THROW 51000, 'Not enough money on selected account', 1
-
 END TRY
+
 BEGIN CATCH
 	ROLLBACK TRAN
 	;THROW	
 END CATCH
 
 COMMIT TRAN
-
 END
 
 GO
